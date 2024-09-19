@@ -1,4 +1,4 @@
-package ru.job4j.urlShotcuts.service.utils;
+package ru.job4j.urlshotcuts.service.utils;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ public class CodeGenerator {
             {65, 90},  /* A-Z */
             {97, 122}  /* a-z */
     };
-    private static final SecureRandom random = new SecureRandom();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
     public String generate(int codeLength) {
         StringBuilder code = new StringBuilder(codeLength);
@@ -24,10 +24,10 @@ public class CodeGenerator {
     }
 
     private int getRandomByte() {
-        int range = random.nextInt(ALLOWED_BYTES.length);
+        int range = RANDOM.nextInt(ALLOWED_BYTES.length);
         int min = ALLOWED_BYTES[range][0];
         int max = ALLOWED_BYTES[range][1];
-        return random.nextInt(max - min + 1) + min;
+        return RANDOM.nextInt(max - min + 1) + min;
     }
 
 }

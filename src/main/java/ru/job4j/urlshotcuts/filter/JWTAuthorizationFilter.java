@@ -1,4 +1,4 @@
-package ru.job4j.urlShotcuts.filter;
+package ru.job4j.urlshotcuts.filter;
 
 
 import com.auth0.jwt.JWT;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static ru.job4j.urlShotcuts.filter.JWTAuthenticationFilter.*;
+import static ru.job4j.urlshotcuts.filter.JWTAuthenticationFilter.*;
 
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 

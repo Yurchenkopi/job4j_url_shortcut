@@ -1,4 +1,4 @@
-package ru.job4j.urlShotcuts.handlers;
+package ru.job4j.urlshotcuts.handlers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;

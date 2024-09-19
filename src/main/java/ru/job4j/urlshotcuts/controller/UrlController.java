@@ -1,12 +1,12 @@
-package ru.job4j.urlShotcuts.controller;
+package ru.job4j.urlshotcuts.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.job4j.urlShotcuts.model.Url;
-import ru.job4j.urlShotcuts.model.dto.UrlDto;
-import ru.job4j.urlShotcuts.service.UrlService;
+import ru.job4j.urlshotcuts.model.Url;
+import ru.job4j.urlshotcuts.model.dto.UrlDto;
+import ru.job4j.urlshotcuts.service.UrlService;
 
 import javax.validation.Valid;
 import java.net.URI;
@@ -22,8 +22,8 @@ public class UrlController {
     @PostMapping({"/convert"})
     public ResponseEntity<Map<String, String>> create(@Valid @RequestBody Url url) {
         var rsl = simpleUrlService.convert(url);
-        return rsl.isEmpty() ?
-                ResponseEntity.badRequest().build() : ResponseEntity.ok(rsl);
+        return rsl.isEmpty()
+                ? ResponseEntity.badRequest().build() : ResponseEntity.ok(rsl);
     }
 
     @GetMapping("/redirect/{code}")
@@ -42,7 +42,7 @@ public class UrlController {
     @GetMapping("/statistic")
     public ResponseEntity<List<UrlDto>> stat() {
         var rsl = simpleUrlService.findAllByUser();
-        return rsl.isEmpty() ?
-                ResponseEntity.notFound().build() : ResponseEntity.ok(rsl);
+        return rsl.isEmpty()
+                ? ResponseEntity.notFound().build() : ResponseEntity.ok(rsl);
     }
 }

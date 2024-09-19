@@ -1,4 +1,4 @@
-package ru.job4j.urlShotcuts.model.dto;
+package ru.job4j.urlshotcuts.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

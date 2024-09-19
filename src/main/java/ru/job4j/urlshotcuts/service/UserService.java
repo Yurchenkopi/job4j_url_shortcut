@@ -1,7 +1,7 @@
-package ru.job4j.urlShotcuts.service;
+package ru.job4j.urlshotcuts.service;
 
-import ru.job4j.urlShotcuts.model.User;
-import ru.job4j.urlShotcuts.model.dto.UserDto;
+import ru.job4j.urlshotcuts.model.User;
+import ru.job4j.urlshotcuts.model.dto.UserDto;
 
 import java.util.List;
 import java.util.Optional;

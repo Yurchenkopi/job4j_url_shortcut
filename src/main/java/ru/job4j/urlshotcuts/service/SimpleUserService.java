@@ -1,14 +1,14 @@
-package ru.job4j.urlShotcuts.service;
+package ru.job4j.urlshotcuts.service;
 
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import ru.job4j.urlShotcuts.model.User;
-import ru.job4j.urlShotcuts.model.dto.UserDto;
-import ru.job4j.urlShotcuts.repository.UserRepository;
-import ru.job4j.urlShotcuts.service.utils.CodeGenerator;
+import ru.job4j.urlshotcuts.model.User;
+import ru.job4j.urlshotcuts.model.dto.UserDto;
+import ru.job4j.urlshotcuts.repository.UserRepository;
+import ru.job4j.urlshotcuts.service.utils.CodeGenerator;
 
 import javax.persistence.EntityManager;
 import java.util.Collections;

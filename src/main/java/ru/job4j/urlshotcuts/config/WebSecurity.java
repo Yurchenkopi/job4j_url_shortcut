@@ -1,4 +1,4 @@
-package ru.job4j.urlShotcuts.config;
+package ru.job4j.urlshotcuts.config;
 
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -9,15 +9,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import ru.job4j.urlShotcuts.filter.JWTAuthenticationFilter;
-import ru.job4j.urlShotcuts.filter.JWTAuthorizationFilter;
-import ru.job4j.urlShotcuts.service.UserDetailsServiceImpl;
+import ru.job4j.urlshotcuts.filter.JWTAuthenticationFilter;
+import ru.job4j.urlshotcuts.filter.JWTAuthorizationFilter;
+import ru.job4j.urlshotcuts.service.UserDetailsServiceImpl;
 
-import static ru.job4j.urlShotcuts.filter.JWTAuthenticationFilter.SIGN_UP_URL;
+import static ru.job4j.urlshotcuts.filter.JWTAuthenticationFilter.SIGN_UP_URL;
 
 @EnableWebSecurity
 @AllArgsConstructor

@@ -1,7 +1,7 @@
-package ru.job4j.urlShotcuts.repository;
+package ru.job4j.urlshotcuts.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import ru.job4j.urlShotcuts.model.User;
+import ru.job4j.urlshotcuts.model.User;
 
 import java.util.List;
 import java.util.Optional;

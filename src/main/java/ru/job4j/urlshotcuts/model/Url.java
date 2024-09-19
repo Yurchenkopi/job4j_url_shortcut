@@ -1,4 +1,4 @@
-package ru.job4j.urlShotcuts.model;
+package ru.job4j.urlshotcuts.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,10 +1,10 @@
-package ru.job4j.urlShotcuts.repository;
+package ru.job4j.urlshotcuts.repository;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import ru.job4j.urlShotcuts.model.Url;
-import ru.job4j.urlShotcuts.model.User;
+import ru.job4j.urlshotcuts.model.Url;
+import ru.job4j.urlshotcuts.model.User;
 
 import javax.transaction.Transactional;
 import java.util.List;
