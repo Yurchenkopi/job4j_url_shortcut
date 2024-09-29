@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.job4j.urlshotcuts.model.User;
-import ru.job4j.urlshotcuts.model.dto.UserDto;
+import ru.job4j.urlshotcuts.dto.UserDto;
 import ru.job4j.urlshotcuts.repository.UserRepository;
 import ru.job4j.urlshotcuts.service.utils.CodeGenerator;
 

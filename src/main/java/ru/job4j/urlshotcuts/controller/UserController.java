@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.job4j.urlshotcuts.model.User;
-import ru.job4j.urlshotcuts.model.dto.UserDto;
+import ru.job4j.urlshotcuts.dto.UserDto;
 import ru.job4j.urlshotcuts.service.UserService;
 
 import javax.validation.Valid;

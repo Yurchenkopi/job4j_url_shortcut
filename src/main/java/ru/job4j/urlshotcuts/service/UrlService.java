@@ -1,7 +1,7 @@
 package ru.job4j.urlshotcuts.service;
 
 import ru.job4j.urlshotcuts.model.Url;
-import ru.job4j.urlshotcuts.model.dto.UrlDto;
+import ru.job4j.urlshotcuts.dto.UrlDto;
 
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ public interface UrlService {
 
     Optional<Url> findUrlByCode(String code);
 
-    Map<String, String> convert(Url url);
+    Optional<Map<String, String>> convert(Url url);
 
     String generateUniqueUrlCode();
 

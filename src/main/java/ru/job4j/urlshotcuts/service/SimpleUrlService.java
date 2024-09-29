@@ -8,7 +8,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import ru.job4j.urlshotcuts.model.Url;
 import ru.job4j.urlshotcuts.model.User;
-import ru.job4j.urlshotcuts.model.dto.UrlDto;
+import ru.job4j.urlshotcuts.dto.UrlDto;
 import ru.job4j.urlshotcuts.repository.UrlRepository;
 import ru.job4j.urlshotcuts.repository.UserRepository;
 import ru.job4j.urlshotcuts.service.utils.CodeGenerator;
@@ -72,8 +72,9 @@ public class SimpleUrlService implements UrlService {
     }
 
     @Override
-    public Map<String, String> convert(Url url) {
-        var rsl = new HashMap<String, String>();
+    public Optional<Map<String, String>> convert(Url url) {
+        Optional<Map<String, String>> rsl = Optional.empty();
+        var response = new HashMap<String, String>();
         var currentUrl = findByUrl(url.getUrl());
         if (currentUrl.isEmpty()) {
             var user = new User();
@@ -89,20 +90,20 @@ public class SimpleUrlService implements UrlService {
                 url.setUser(user);
                 url.setUrl(url.getUrl());
                 url.setCode(generateUniqueUrlCode());
-                rsl.put("code", url.getCode());
                 try {
                     urlRepository.save(url);
+                    response.put("code", url.getCode());
                 } catch (Exception e) {
                     LOG.error("Произошла ошибка при сохранении записи в БД: " + e.getMessage());
-                    return Collections.emptyMap();
+                    return rsl;
                 }
             } else {
                 throw new IllegalArgumentException("Url should start with: " + user.getSite());
             }
         } else {
-            rsl.put("code", currentUrl.get().getCode());
+            response.put("code", currentUrl.get().getCode());
         }
-        return rsl;
+        return Optional.of(response);
     }
 
     @Override

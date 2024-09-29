@@ -1,4 +1,7 @@
 # Job4j_urlShortcut
+![Java CI](https://github.com/Yurchenkopi/job4j_url_shortcut/actions/workflows/main.yml/badge.svg)
+![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Yurchenkopi/job4j_url_shortcut/master/.github/badges/jacoco.json)
+![Branches](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Yurchenkopi/job4j_url_shortcut/master/.github/badges/branches.json)
 ## Описание проекта
 Проект выполнен в учебных целях для освоения RestFul API архитектуры.
 Проект является сервисом, меняющий ссылки на зарегистрированный в системе сайт уникальным кодом.
